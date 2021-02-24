@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="dest/style.min.css">
     <link rel="stylesheet" href="dest/fonts.css">
     <link rel="stylesheet" href="dest/stylelibs.min.css">
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
 </head>
 
 <body>
@@ -28,16 +29,17 @@
 
             <div class="header__logo">
                 <a href="#"><img src="img/Logo.png" alt="wooder"></a>
-                <h1 class="hidden">Wooder</h1>
+                <!-- <h1 class="hidden">Wooder</h1> -->
             </div>
             <div class="header__menu">
-             
+            
                     <ul>
-                        <li><a href="#" >home</a></li>
-                        <li><a href="#" >products</a></li>
-                        <li><a href="#" >about</a></li>
-                        <li><a href="#" >contact</a></li>
-                        <li><a href="#" >learn more</a></li>
+                        
+                        <li><a href="#furniture" data-section='.furniture' >furniture</a></li>
+                        <li><a href="#decor" data-section='.decor'>decor</a></li>
+                        <li><a href="#quality" data-section='.quality'>quality</a></li>
+                        <li><a href="#wedo" data-section='.wedo'>wedo</a></li>
+                        <li><a href="#gallery" data-section='.gallery'>gallery</a></li>
                     </ul>
             </div>
            
@@ -45,7 +47,7 @@
                 <div class="header__lang">
                     <div class="header__lang-current">
                         <span>en</span>
-                        <img src="img/ic_triangle.png" alt="dropdown">
+                        <img src="img/drop-down-arrow.svg" alt="dropdown">
                     </div>
                     <div class="header__lang-option">
                         <a href="#" >jp</a>
@@ -53,18 +55,21 @@
                         <a href="#" >vn</a>
                     </div>
                 </div>
-                <div class="header__menu-bar">
-                    <span></span>
+                <div class="header__menu-bar" >
+                    <div>
+                        <span></span>
+                    </div>
                 </div>
+
                 <div class="menu-list">
                     <ul>
                         <li><a href="#" >home</a></li>
                         <li><a href="#" >products</a></li>
                         <li><a href="#" >about</a></li>
                         <li><a href="#" >contact</a></li>
-                        <li><a href="#" >learn more</a></li>
+                        <li><a href="#" >News</a></li>
                     </ul>
-            </div>
+                </div>
             </div>
             
             
@@ -75,9 +80,9 @@
     </div>
 
      <div class="main">
-            <div class="slider">
+            <div class="slider "id='slider'>
                 <div class="slider__list">
-                    <div class="slider__item">
+                    <div class="slider__item ">
                         <img src="img/slider.jpg" alt="">
                         <div class="slider__item-text">
                             <h2>wooder</h2>
@@ -87,26 +92,26 @@
                             </a>
                         </div>
                     </div>
-                     <!-- <div class="slider__item">
+                     <div class="slider__item">
                         <img src="img/slider.jpg" alt="">
                         <div class="slider__item-text">
-                            <h2>wooder</h2>
+                            <h2>wooder 2</h2>
                             <a href="#"  class="btn-learnmore">
-                                learn more
+                             <span>learn more</span>
                             <i><img src="img/ic_next-pre.png" alt=""></i>
                             </a>
                         </div>
-                    </div> -->
-                     <!-- <div class="slider__item">
+                    </div>
+                    <div class="slider__item">
                         <img src="img/slider.jpg" alt="">
                         <div class="slider__item-text">
-                            <h2>wooder</h2>
+                            <h2>wooder 3</h2>
                             <a href="#"  class="btn-learnmore">
-                                learn more
+                             <span>learn more</span>
                             <i><img src="img/ic_next-pre.png" alt=""></i>
                             </a>
                         </div>
-                    </div> -->
+                    </div>
                     
                 </div> 
                     <div class="slider__btn">
@@ -115,8 +120,7 @@
                                 <div class="number"><h3>01</h3></div>
                                 <div class="dotted">
                                     <ul>
-                                        <li></li>
-                                        <li></li>
+                                        <li class="act-dot"></li>
                                         <li></li>
                                         <li></li>
                                     </ul>
@@ -127,8 +131,8 @@
                                 <div class="arrow"><img src="img/line_move.png" alt="line" class="move-down"></div>      
                             </div>
                             <div class="slider__btn-controls">
-                                <div class="ctrl --pre"><img src="img/ic_next-pre.png" alt="prev"></div>
-                                <div class="ctrl --next"><img src="img/ic_next-pre.png" alt="next"></div>
+                                <div class="ctrl --pre fl-pre"><img src="img/ic_next-pre.png" alt="prev"></div>
+                                <div class="ctrl --next fl-next" ><img src="img/ic_next-pre.png" alt="next"></div>
                                 
 
                             </div>
@@ -137,7 +141,7 @@
                     </div>
             </div>
 
-        <div class="furniture" >
+        <div class="furniture" id='furniture' >
             <div class="container">
                 <div class="item__text --pd_right --text_left ">
                     <h3> furniture </h3> 
@@ -150,7 +154,7 @@
             </div>
         </div>
 
-        <div class="decor">
+        <div class="decor" id='decor'>
             <div class="container">
                 <div class="item__img ">
                     <img src="img/decor1.png" alt="decor">
@@ -164,7 +168,7 @@
             </div>
         </div>
 
-        <div class="quality">
+        <div class="quality" id='quality'>
             <div class="container">
                 <div class="quality__text">
                     <h3>wooder - is quality</h3>
@@ -172,14 +176,14 @@
                 </div>
                 <div class="quality__video">
                     <div class="quality__video-item">
-                        <div>
+                        <div data-src="n44RKy96v9c">
                             <img src="img/decor.jpg" alt="video1">
                         </div>
                         <p>Innovation Design</p>
                     </div>
 
                     <div class="quality__video-item">
-                        <div>
+                        <div data-src="h319Zv1I0sU">
                             <img src="img/video2.jpg" alt="video2">
                             <span class="btn-play"></span>
                         </div>
@@ -187,7 +191,7 @@
                     </div>
 
                     <div class="quality__video-item">
-                        <div>
+                        <div data-src="ckWumGMZvdY">
                             <img src="img/video3.jpg" alt="video3">
                             <span class="btn-play"></span>
                         </div>
@@ -197,7 +201,7 @@
             </div>
         </div>
 
-        <div class="wedo">
+        <div class="wedo" id='wedo'>
             <div class="container">
                 <div class="wedo__content">
                     <h3>we do the design of any complexity</h3>
@@ -209,7 +213,7 @@
             </div>
         </div>
 
-        <div class="aboutUs">
+        <div class="aboutUs" id='aboutUs'>
             <div class="container">
                 <div class="item__img" >
                     <img src="img/aboutUs.jpg" alt="decor">
@@ -223,36 +227,46 @@
             </div>
         </div>
 
-        <div class="gallery">
+        <div class="gallery" id='gallery'>
             <div class="container">
                 <div class="item__text">
                     <h3>gallery</h3>
                     <p> We are a team of professionals in the wood processing and the creatior of wooden furniture of the highest class. </p>
                 </div>
-                <div class="item__gallery">
-                    <div class="item-img img-1">
-                        <img src="img/gallery_1.jpg" alt="gallery_1">
-                    </div>
+                <div class="item__gallery" itemscope data-pswp-uid="1">
+                    <figure class="item-img img-1">
+                        <a href="img/gallery_1.jpg" data-size="225x300">
+                            <img src="img/gallery_1.jpg" alt="">
+                        </a>
+                    </figure>
                    
-                    <div class="item-img img-2">
-                        <img src="img/gallery_2.jpg" alt="gallery_3">
-                    </div>
-                    <div class="item-img img-3">
-                        <img src="img/gallery_3.jpg" alt="gallery_4">
-                    </div>
-                    <div class="item-img img-4">
-                        <img src="img/gallery_4.jpg" alt="gallery_2">
-                    </div>
-                    <div class="item-img img-5">
-                        <img src="img/gallery_5.jpg" alt="gallery_5">
-                    </div>
+                    <figure class="item-img img-2">
+                        <a href="img/gallery_2.jpg" data-size="293x440">
+                            <img src="img/gallery_2.jpg" alt="">
+                        </a>
+                    </figure>
+                    <figure class="item-img img-3">
+                        <a href="img/gallery_3.jpg" data-size="640x427">
+                            <img src="img/gallery_3.jpg" alt="">
+                        </a>
+                    </figure>
+                    <figure class="item-img img-4">
+                        <a href="img/gallery_4.jpg" data-size="640x427">
+                            <img src="img/gallery_4.jpg" alt="">
+                        </a>
+                    </figure>
+                    <figure class="item-img img-5">
+                        <a href="img/gallery_5.jpg" data-size="640x427">
+                            <img src="img/gallery_5.jpg" alt="">
+                        </a>
+                    </figure>
                     
                     
                 </div>
              </div>
         </div>
 
-        <div class="news">
+        <div class="news" id='news'>
             <div class="container">
                 <div class="item__text">
                     <h3>news</h3>
@@ -285,29 +299,78 @@
         </div>
 
         <div class="carsoul">
-            <div><img src="img/carsoul_1.jpg" alt="ca1"></div>
-            <div><img src="img/carsoul_2.jpg" alt="ca2"></div>
-            <div><img src="img/carsoul_3.jpg" alt="ca3"></div>
-            <div><img src="img/carsoul_4.jpg" alt="ca4"></div>
-            <div><img src="img/carsoul_4.jpg" alt="ca4"></div>
+            <div class="carsoul_item"><img src="img/carsoul_1.jpg" alt="ca1"></div>
+            <div class="carsoul_item"><img src="img/carsoul_2.jpg" alt="ca2"></div>
+            <div class="carsoul_item"><img src="img/carsoul_3.jpg" alt="ca3"></div>
+            <div class="carsoul_item"><img src="img/carsoul_4.jpg" alt="ca4"></div>
+            <div class="carsoul_item"><img src="img/carsoul_3.jpg" alt="ca3"></div>
+            <div class="carsoul_item"><img src="img/carsoul_4.jpg" alt="ca4"></div>
+           
         </div>
     </div>
      <div class="footer">
         <div class="container">
             <div class="footer__cre">
-                <p>© 2016 wooder_ demo by CFD</p>
+                <p>©2016 Wooder_ by Lam at CFD</p>
             </div>
             <div class="footer__logo">
                <a href="#"><img src="img/Logo.png" alt="wooder"></a>
                
             </div>
             <div class="footer__back">
-                <a href="#top "> Back to top </a>
+                <a href="#"> Back to top </a>
             </div>
         </div>
         
     </div>
-    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <div class="showVideo">
+        <div class="showVideo__video">
+            <iframe id="ifrVideo" width="560" height="315"  src="https://www.youtube.com/embed/n44RKy96v9c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <span class="close">x</span>
+        </div>
+      
+    </div>
+
+
+
+<!--Popup-->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+   
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 
